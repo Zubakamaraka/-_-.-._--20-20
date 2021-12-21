@@ -3,23 +3,15 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-    <link rel="apple-touch-icon" sizes="180x180"
-    href="favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-    href="favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-    href="favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg"
-    color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
     <title>
       Тетрадь
     </title>
@@ -48,7 +40,11 @@
         <button class="Button1"><a href="../Адрес и контакты.html"> Адрес и контакты</a></button>
         <button class="Button1"><a href="../О нас.html"> О нас </a></button>
       </div>
-      <div style="float:left; width:950px;">
+
+
+      <div class="main">
+
+
         <div style="padding-left: 10px; background:#FFF; border-radius:5px;">
           <h1>Тетрадь «Лягушка»</h1>
         </div>
@@ -57,7 +53,7 @@
           <div class="col-9">
             <div id="carouselExampleIndicators" class="carousel slide"
             data-ride="carousel" data-interval="false"
-            style="width: 450px;">
+            style="max-width: 60%;">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators"
                 data-slide-to="0" class="active"></li>
@@ -161,18 +157,18 @@
         </div>
       </div>
     </div>
-
-    <div class="clearfix"></div>
+    <div id="arrowTop" onclick="Top()">
+      <img src="https://image.flaticon.com/icons/png/512/60/60583.png"
+      style=" width: 30px; height: 30px; border-radius: 100px"
+      </img>
+    </div>
     <footer>
       <div class="foot-up"></div>
       <div class="DOWN">
         <p class="textFoot" style="font-size: 16px">
-        ©Домовёнок 2021. Соловов Михаил Евгеньевич.
+          ©Домовёнок 2021. Соловов Михаил Евгеньевич.
           ИКБО-20-20 </p>
       </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
 </html>

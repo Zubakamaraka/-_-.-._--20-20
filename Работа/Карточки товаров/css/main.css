@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Bowlby+One+SC|Russo+One');
 html
 {
-  height: 100%;
   scroll-behavior: smooth;
+  height: auto;
 }
-body::-webkit-scrollbar
-{
-  width: 10px;               /* ширина scrollbar */
+/* scrollbar */
+body::-webkit-scrollbar {
+  max-width: 10px;               /* ширина scrollbar */
 }
 body::-webkit-scrollbar-track {
   background: linear-gradient(to bottom,#5d9634,#5d9634 50%,	#476612 50%,	#476612);       /* цвет дорожки */
@@ -16,131 +16,96 @@ body::-webkit-scrollbar-thumb {
   border-radius: 30px;       /* закругления плашки */
   background: linear-gradient(90deg, #707f13 0%, #ffec00 46%, #215a06 100%);   /* padding вокруг плашки */
 }
+/* Тело сайта */
 body
 {
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background: url("../../css/Картинки и прочее/pattern.svg");
-  font-family: "Arimo";
-  font-weight: 300px;
-  font-size: 16px;
-  color: #000000;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+
+/* Шапка */
+
 header
 {
-display: flex;
-flex-direction: column;
-height: auto;
+display: grid;
+grid-template-rows: minmax(100px,200px) minmax(30px,auto);
 background: rgba(45, 137, 42, 0.61);
 color: #FFF;
-width: 100%;
 }
 .UP
 {
 display: flex;
-justify-content: space-around;
-grid-gap: 100px;
+grid-gap:50px;
+justify-content: space-between;
 align-items: center;
-height: 100px;
 background: rgba(45, 137, 42, 0.61);
 color: #FFF;
-width: 100%;
 }
+
 .head-down
 {
-  width: auto;
-  height: 25px;
   background-color: #195514;
   border: 1px solid #000;
   background: url("../../css/Картинки и прочее/pattern (2).svg");
 }
-h1
+.Right
 {
-  font-family:"Arimo";
-  font-weight: 800;
-  color: #2F4F4F;
-}
-p
-{
-  line-height: 28px;
-  margin-bottom: 25px;
-}
-.centered
-{
-  text-align: center;
+  max-width: 100%;
 }
 
-a
+#Log
 {
-  color: #000000;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+#NewYear
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Подвал */
+footer
+{
+display: grid;
+grid-template-rows: 30px 50px;
+background: url("../../css/Картинки и прочее/pattern (1).svg");
+border-top: 1px inset #000;
+color: #FFF;
+flex-shrink: 0;
+}
+.DOWN
+{
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: flex-end;
+align-items: flex-end;
+height: auto;
+background: url("../../css/Картинки и прочее/pattern (1).svg");
+color: #FFF;
+}
+.foot-up
+{
+  background-color: #195514;
+  border: 1px solid #000;
+  background: url("../../css/Картинки и прочее/pattern (2).svg");
 }
 
-a:hover, a:focus
-{
-  text-decoration: underline;
-  outline: 1
-  color: #FF0000
-}
-
-hr
-{
-  display: block;
-  height: 1px;
-  border: 1px;
-  border-top: 1px solid #2d2d2d;
-  margin: 1em 0;
-  padding: 0;
-}
-.gallery
-{
-  margin: 10px 50px;
-  width: 250px;
-}
-.carousel-inner img
-{
-  width: 150px;
-  padding: 5px;
-  filter:grayscale(20%);
-  transition: 1s;
-}
-
-.gallery img:hover
-{
-  filter: grayscale(0);
-  transform: scale(1.1);
-}
-
-/*  Боковая панель */
-#rsb
- {
-    background-color: #E6E6FA;
-    width: 150px;
-	  float: left;
-}
-.Left
-{
-  display: flex;
-  grid-area: Left;
-  flex-direction: column;
-  align-items: center;
-  grid-gap: 10px;
-  width: 300px;
-  height: auto;
-}
 .Button1
 {
+  max-width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 250px;
-  height: 70px;
-  user-select: none;
-  padding: .8em 2em;
-  outline: none;
+  padding: .4em 2.9em;
   background: linear-gradient(to bottom,#5d9634,#5d9634 50%,	#476612 50%,	#476612);
   background-size: 100% 10px;
   background-position: 50% 50%;
@@ -154,14 +119,10 @@ hr
 }
 .Button1:active
 {
-  top: 1px;
   color: #ffdead;
   box-shadow: inset #FF0000 0 -1px 1px, inset 0 1px 1px #FF0000, #FF0000 0 0 0 1px, 0 10px 10px -9px #000;
 }
-.Button1:not(:hover)
-{
-transition: all .5s;
-}
+
 a:link
  {
   font-family: cursive;
@@ -183,51 +144,66 @@ a:active
  {
   color: #FFAA00;
 }
+
+h1
+{
+  font-family:"Arimo";
+  font-weight: 800;
+  color: #2F4F4F;
+}
+
+p
+{
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.centered
+{
+  text-align: center;
+}
+.main
+{
+  display: grid;
+  max-width: 90%;
+  grid-gap: 10px;
+  background: url("Картинки и прочее/pattern (3).svg");
+  border-radius: 10px;
+}
+
+/* Слайдер */
+.carousel-inner img
+{
+  width: 150px;
+  padding: 5px;
+  filter:grayscale(20%);
+  transition: 1s;
+}
+
+/*  Боковая панель */
+.Left
+{
+  display: flex;
+  grid-area: Left;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 10px;
+  width: 300px;
+  height: auto;
+}
+
 .content
 {
+  display: flex;
   flex: 1 0 auto;
-  display: grid;
-  grid-template-areas: 'Left main_block';
-  grid-template-columns: 300px auto;
-  width: 100%;
-  height: auto;
+  flex-direction: row;
+  max-width: 1200px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* Подвал */
-footer
-{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-height: 80px;
-background: url("../../Картинки и прочее/pattern (1).svg");
-border-top: 1px inset #000;
-color: #FFF;
-width: 100%;
-flex-shrink: 0;
-}
-.DOWN
-{
-display: flex;
-justify-content: center;
-flex-direction: row;
-flex-wrap: nowrap;
-align-content: flex-end;
-align-items: flex-end;
-height: auto;
-background: url("../../css/Картинки и прочее/pattern (1).svg");
-color: #FFF;
-width: 100%;
-}
-.foot-up
-{
-  width: auto;
-  height: 25px;
-  background-color: #195514;
-  border: 1px solid #000;
-  background: url("../../css/Картинки и прочее/pattern (2).svg");
-}
+
+
+
 .star-small
 {
   color:#f7941e;
@@ -255,14 +231,6 @@ width: 100%;
 {
   color:#f7941e;
   font-size: 25px;
-}
-
-#navbarSupportedContent
-{
-	font-size: 16px;
-	background-color: #FF4040;
-  border: 1px solid black;
-  border-radius: 5px;
 }
 
 #Ссылка1
@@ -306,4 +274,14 @@ border: 3px solid rgb( 128, 0, 0 );
 #Купить:hover
 {
 background-color: rgb( 255, 0, 0 );
+}
+
+#arrowTop
+{
+max-width: 100%;
+max-height: 100%;
+position: fixed;
+right: 20px;
+bottom: 30px;
+cursor: pointer;
 }

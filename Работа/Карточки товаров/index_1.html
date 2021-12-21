@@ -3,23 +3,15 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-    <link rel="apple-touch-icon" sizes="180x180"
-    href="favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-    href="favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-    href="favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg"
-    color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
     <title>
       Медведь
     </title>
@@ -39,6 +31,8 @@
       </div>
       <div class="head-down"></div>
     </header>
+
+
     <div class="content">
       <div class="Left">
         <button class="Button1"><a href="../Основа.html"> Главная </a></button>
@@ -47,15 +41,20 @@
         <button class="Button1"><a href="../Адрес и контакты.html"> Адрес и контакты</a></button>
         <button class="Button1"><a href="../О нас.html"> О нас </a></button>
       </div>
-      <div style="float:left; width:950px;">
+
+
+      <div class="main">
+
         <div style="padding-left: 10px; background:#FFF; border-radius:5px;">
           <h1>Мягкая игрушка Laffi Медвежонок кремовый 85см</h1>
         </div>
-        <div class="row" style="height: auto; width: 100%;background:#FFF; border-radius:5px; margin-left:1px;">
+
+        <!-- Слайдер и покупка -->
+        <div class="row" style="height: auto; max-width: 100%;background:#FFF; border-radius:5px; margin-left:1px;">
           <div class="col-9">
             <div id="carouselExampleIndicators" class="carousel slide"
             data-ride="carousel" data-interval="false"
-            style="width: 450px;">
+            style="max-width: 60%;">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators"
                 data-slide-to="0" class="active"></li>
@@ -107,6 +106,8 @@
             <a id="Купить" href="https://www.detmir.ru/product/index/id/2762441/">Купить</a>
           </div>
         </div>
+
+        <!-- Описание -->
         <h3 style="padding-left: 10px; background:#FFF; border-radius:5px;margin-top: 10px;">Описание товара</h3>
         <p style="padding-left: 10px; background:#FFF; border-radius:5px; ">
           В семье Laffi появились друзья-медвежата:
@@ -122,6 +123,8 @@
           хорошо сохраняющего форму. Без
           музыкальных элементов и механизмов.
         </p>
+
+        <!-- Отзывы -->
         <br />
         <br />
         <h4 style="margin-top:-20px; background:#FFF; border-radius:5px; ">Характеристики</h4>
@@ -168,7 +171,12 @@
         </div>
       </div>
     </div>
-    <div class="clearfix"></div>
+    <div id="arrowTop" onclick="Top()">
+      <img src="https://image.flaticon.com/icons/png/512/60/60583.png"
+      style=" width: 30px; height: 30px; border-radius: 100px"
+      </img>
+    </div>
+    <!-- Нижняя часть сайта -->
     <footer>
       <div class="foot-up"></div>
       <div class="DOWN">
@@ -177,7 +185,4 @@
           ИКБО-20-20 </p>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
 </html>
