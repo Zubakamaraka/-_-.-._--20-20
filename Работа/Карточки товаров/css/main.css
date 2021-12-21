@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Bowlby+One+SC|Russo+One');
+html
+{
+  scroll-behavior: smooth;
+  height: auto;
+}
+/* scrollbar */
+body::-webkit-scrollbar {
+  max-width: 10px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom,#5d9634,#5d9634 50%,	#476612 50%,	#476612);       /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #707f13 0%, #ffec00 46%, #215a06 100%);   /* цвет плашки */
+  border-radius: 30px;       /* закругления плашки */
+  background: linear-gradient(90deg, #707f13 0%, #ffec00 46%, #215a06 100%);   /* padding вокруг плашки */
+}
+/* Тело сайта */
+body
+{
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: url("../../css/Картинки и прочее/pattern.svg");
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Шапка */
+
+header
+{
+display: grid;
+grid-template-rows: minmax(100px,200px) minmax(30px,auto);
+background: rgba(45, 137, 42, 0.61);
+color: #FFF;
+}
+.UP
+{
+display: flex;
+grid-gap:50px;
+justify-content: space-between;
+align-items: center;
+background: rgba(45, 137, 42, 0.61);
+color: #FFF;
+}
+
+.head-down
+{
+  background-color: #195514;
+  border: 1px solid #000;
+  background: url("../../css/Картинки и прочее/pattern (2).svg");
+}
+.Right
+{
+  max-width: 100%;
+}
+
+#Log
+{
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+#NewYear
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Подвал */
+footer
+{
+display: grid;
+grid-template-rows: 30px 50px;
+background: url("../../css/Картинки и прочее/pattern (1).svg");
+border-top: 1px inset #000;
+color: #FFF;
+flex-shrink: 0;
+}
+.DOWN
+{
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: flex-end;
+align-items: flex-end;
+height: auto;
+background: url("../../css/Картинки и прочее/pattern (1).svg");
+color: #FFF;
+}
+.foot-up
+{
+  background-color: #195514;
+  border: 1px solid #000;
+  background: url("../../css/Картинки и прочее/pattern (2).svg");
+}
+
+.Button1
+{
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .4em 2.9em;
+  background: linear-gradient(to bottom,#5d9634,#5d9634 50%,	#476612 50%,	#476612);
+  background-size: 100% 10px;
+  background-position: 50% 50%;
+  border-radius: 10px;
+  box-shadow: inset #476612 0 -1px 1px, inset 0 1px 1px #5d9634, #476612 0 0 0 1px, #000 0 10px 15px -10px;
+  transition: all .5s;
+}
+.Button1:hover
+{
+  background-size: 140% 100%, auto;
+}
+.Button1:active
+{
+  color: #ffdead;
+  box-shadow: inset #FF0000 0 -1px 1px, inset 0 1px 1px #FF0000, #FF0000 0 0 0 1px, 0 10px 10px -9px #000;
+}
+
+a:link
+ {
+  font-family: cursive;
+  font-size: 20px;
+  color: #FFF;
+  text-shadow: 0 -2px 2px #000000;
+  text-decoration:  none;
+  cursor: pointer;
+}
+a:visited
+{
+  color: #fff;
+}
+a:hover
+{
+  color: #F7FE00;
+}
+a:active
+ {
+  color: #FFAA00;
+}
+
+h1
+{
+  font-family:"Arimo";
+  font-weight: 800;
+  color: #2F4F4F;
+}
+
+p
+{
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.centered
+{
+  text-align: center;
+}
+.main
+{
+  display: grid;
+  max-width: 90%;
+  grid-gap: 10px;
+  background: url("Картинки и прочее/pattern (3).svg");
+  border-radius: 10px;
+}
+
+/* Слайдер */
+.carousel-inner img
+{
+  width: 150px;
+  padding: 5px;
+  filter:grayscale(20%);
+  transition: 1s;
+}
+
+/*  Боковая панель */
+.Left
+{
+  display: flex;
+  grid-area: Left;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.content
+{
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.star-small
+{
+  color:#f7941e;
+}
+
+.empty-star
+{
+  color:#555;
+  background-color: #fff;
+}
+
+.date
+{
+	font-size: 11px;
+	padding-left: 10px;
+}
+
+.star
+{
+  color:#f7941e;
+  font-size: 25px;
+}
+
+.halfstar
+{
+  color:#f7941e;
+  font-size: 25px;
+}
+
+#Ссылка1
+{
+  font-size:16px;
+  color:#FF0000;
+}
+
+#Цена
+{
+  font-family: "Arimo";
+  font-size: 50px;
+  color:#FF0000;
+}
+#Купить
+{
+border-radius: 7px;
+-webkit-box-shadow: inset 0 1px 0 rgba(250, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+color: #fff;
+width:150px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 28px;
+padding: 5px 7px;
+margin: 5px auto;
+text-decoration: none;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: background-color 0.1s linear;
+-moz-transition: background-color 0.1s linear;
+-o-transition: background-color 0.1s linear;
+transition: background-color 0.1s linear;
+}
+#Купить
+{
+background-color: rgb( 230, 0, 0 );
+border: 3px solid rgb( 128, 0, 0 );
+}
+
+#Купить:hover
+{
+background-color: rgb( 255, 0, 0 );
+}
+
+#arrowTop
+{
+max-width: 100%;
+max-height: 100%;
+position: fixed;
+right: 20px;
+bottom: 30px;
+cursor: pointer;
+}
